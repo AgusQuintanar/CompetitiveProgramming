@@ -21,3 +21,5 @@ int main(){
 
     cout << int((log10(b/a) / log10(3.0/2))+EPS) + 1 << endl; //be
 }
+
+// 31 ms	12 KB

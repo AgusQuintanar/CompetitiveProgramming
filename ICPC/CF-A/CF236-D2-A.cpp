@@ -25,3 +25,5 @@ int main(){
     string result = (chars.size() % 2 == 0) ? "CHAT WITH HER!" : "IGNORE HIM!";
     cout <<  result << endl;
 }
+
+//62 ms	152 KB

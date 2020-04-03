@@ -32,3 +32,6 @@ int main(){
     }
     cout << result << endl;
 }
+
+
+// 62 ms	12 KB

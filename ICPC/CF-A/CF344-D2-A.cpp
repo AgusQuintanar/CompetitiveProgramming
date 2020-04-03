@@ -33,3 +33,5 @@ int main(){
     cout << groups << endl;
 
 }
+
+// 62 ms	12 KB

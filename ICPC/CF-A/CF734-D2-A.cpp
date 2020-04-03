@@ -28,3 +28,5 @@ int main(){
 
     cout << winner << endl;
 }
+
+// 	31 ms	268 KB

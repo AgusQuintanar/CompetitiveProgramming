@@ -36,3 +36,4 @@ int main(){
     cout << word << endl;
 }
 
+// 	62 ms	12 KB

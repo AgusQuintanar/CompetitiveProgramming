@@ -29,3 +29,6 @@ int main(){
 
     cout << answer << endl;
 }
+
+
+// 62 ms	4 KB

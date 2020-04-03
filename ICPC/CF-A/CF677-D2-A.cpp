@@ -20,6 +20,8 @@ int main(){
 		cin >> tempHeight;
 		width = (tempHeight > h) ? width + 2 : width + 1;
 	}
-	
+
 	cout << width << endl;
 }
+
+// time: 15 ms  || Mem: 8 KB

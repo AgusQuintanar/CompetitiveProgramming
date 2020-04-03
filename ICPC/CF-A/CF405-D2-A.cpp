@@ -25,3 +25,5 @@ int main(){
         answer += to_string(x) + " ";
     cout << answer << endl; 
 }
+
+// 46 ms	16 KB
