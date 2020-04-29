@@ -8,8 +8,8 @@
 #define debug_c(a) 42
 #endif
 
-#include <set>
 #include <vector>
+#include <unordered_map> 
 using namespace std;
 
 int main(){
@@ -19,7 +19,7 @@ int main(){
 	int n; cin >> n;
 
     vector<int> localUniforms (n);
-    multiset<int> guestUniforms;
+    unordered_map<int, int> guestUniforms;
 
     int guestColor,
         uniformChanges = 0;
@@ -27,13 +27,17 @@ int main(){
     for (int i=0; i<n; i++) { //taking input
         cin >> localUniforms[i];
         cin >> guestColor;
-        guestUniforms.insert(guestColor);
+       
+        d
     }
 
-    for (int i=0; i<n; i++) uniformChanges += guestUniforms.count(localUniforms[i]);
-    
-    cout << uniformChanges << endl;
+    unordered_map<int, int> :: const_iterator c_it;
 
+    for (int i=0; i<n; i++) {
+        c_it = guestUniforms.find(localUniforms[i]);
+        if (c_it != guestUniforms.end()) uniformChanges += c_it->second;
+    }
+
+    cout << uniformChanges << endl;
 }
 
-// 92 ms	200 KB
