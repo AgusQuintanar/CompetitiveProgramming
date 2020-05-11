@@ -16,8 +16,27 @@ int main(){
     int n, t, k, d;
     cin >> n >> t >> k >> d;
 
-    if (t*(n/k) > d + t*(n/(2*k)) - d/t) cout << "YES" << endl; else cout << "NO" << endl;
+    int bakedCakesWOven = 0, bakedCakesWoutOven = 0;
    
+    int seconds = 1;
+    while (1) {
+        if (seconds % t == 0) {
+            bakedCakesWoutOven += k;
+            bakedCakesWOven += k;
+        } 
+        if (seconds > d) {
+            if ((seconds - d) % t == 0) bakedCakesWOven += k;
+        }
+        if (bakedCakesWoutOven >= n) {
+            cout << "NO" << endl;
+            break;
+        }
+        if (bakedCakesWOven >= n) {
+            cout << "YES" << endl;
+            break;
+        }
+        seconds++;
+   }
 }
 
 
