@@ -12,16 +12,6 @@ using namespace std;
 
 #include <vector>
 
-bool has_less_strength(vector<int> v, int pos) {
-    for (int i=pos-1; i>=0; i--) if (v[i] < v[pos]) return true;
-    return false;
-}
-
-bool has_more_strength(vector<int> v, int pos, int n) {
-    for (int i=pos+1; i<n; i++) if (v[i] > v[pos]) return true;
-    return false;
-}
-
 int main(){
 	ios::sync_with_stdio(false);
 	cin.tie(0);
@@ -29,16 +19,24 @@ int main(){
     int n; cin >> n;
     vector<int> stewards (n);
 
+    int min = 1000000000,
+        max = 0,
+        s = 0;
+
     for (int i=0; i<n; i++) {
-        cin >> stewards [i];
+        cin >> s;
+        stewards [i] = s;
+
+        if (s < min) min = s;
+        else if (s > max) max = s;
     }
 
     int counter = 0;
 
-    for (int i=1; i<n-1; i++) {
-        if (has_less_strength(stewards, i) && has_more_strength(stewards, i, n)) counter++;
-    }
+    for (int i=0; i<n; i++) if (min < stewards[i] && stewards[i] < max) counter++;
+    
 
    cout << counter << endl;
 }
 
+// 46 ms	4000 KB
