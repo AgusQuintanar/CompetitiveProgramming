@@ -8,18 +8,18 @@
 #define debug_c(a) 42
 #endif
 
-#include <cmath>
-
 using namespace std;
+
+#include <string>
 
 int main(){
 	ios::sync_with_stdio(false);
 	cin.tie(0);
 
-    float a, b;
-    cin >> a >> b;
+    string a;
+    getline(cin, a);
 
-    cout << int((log10(b/a) / log10(3.0/2))+EPS) + 1 << endl; //be
+    cout << a << endl;
 }
 
-// 31 ms	12 KB
+

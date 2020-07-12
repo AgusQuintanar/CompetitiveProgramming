@@ -35,7 +35,6 @@ int main(){
 
     for (int i=0; i<n; i++) if (min < stewards[i] && stewards[i] < max) counter++;
     
-
    cout << counter << endl;
 }
 

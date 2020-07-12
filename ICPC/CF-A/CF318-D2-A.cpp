@@ -8,18 +8,19 @@
 #define debug_c(a) 42
 #endif
 
-#include <cmath>
-
 using namespace std;
 
 int main(){
 	ios::sync_with_stdio(false);
 	cin.tie(0);
-
-    float a, b;
-    cin >> a >> b;
-
-    cout << int((log10(b/a) / log10(3.0/2))+EPS) + 1 << endl; //be
+	
+    unsigned long long int n, k;
+    cin >> n >> k;
+ 
+    unsigned long long int evenRange = (n % 2 == 0) ? n/2 : (n/2) + 1,
+                           result = (k <= evenRange) ? 2*k-1 : 2*(k-evenRange);
+    
+    cout << result << endl;
+   
 }
 
-// 31 ms	12 KB

@@ -27,8 +27,7 @@ int main(){
     for (int i=0; i<n; i++) { //taking input
         cin >> localUniforms[i];
         cin >> guestColor;
-       
-        d
+
     }
 
     unordered_map<int, int> :: const_iterator c_it;
@@ -40,4 +39,7 @@ int main(){
 
     cout << uniformChanges << endl;
 }
+
+
+
 

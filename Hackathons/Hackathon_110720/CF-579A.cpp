@@ -8,18 +8,20 @@
 #define debug_c(a) 42
 #endif
 
-#include <cmath>
-
 using namespace std;
+#include <string>
+#include <math.h> 
 
 int main(){
 	ios::sync_with_stdio(false);
 	cin.tie(0);
+	
+    unsigned long long int n, result=0; cin >> n;
+    
+    while (n != 0) {
+        result += n%2;
+        n = n/2;
+    }
 
-    float a, b;
-    cin >> a >> b;
-
-    cout << int((log10(b/a) / log10(3.0/2))+EPS) + 1 << endl; //be
+    cout << result << endl;
 }
-
-// 31 ms	12 KB

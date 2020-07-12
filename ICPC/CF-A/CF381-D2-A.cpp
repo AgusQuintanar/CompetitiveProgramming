@@ -31,7 +31,8 @@ int main(){
         if (rightmostCard > leftmostCard) {
             if (turn % 2 == 0) sereja += rightmostCard; else dima += rightmostCard;
             rightmostPointer--;
-        } else {
+        } 
+        else {
             if (turn % 2 == 0) sereja += leftmostCard; else dima += leftmostCard;
             leftmostPointer++;
         }
