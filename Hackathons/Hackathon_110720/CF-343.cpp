@@ -31,6 +31,3 @@ int main(){
    
     cout << (st.size() ? "Yes" : "No") << endl;
 }
-
-
-
