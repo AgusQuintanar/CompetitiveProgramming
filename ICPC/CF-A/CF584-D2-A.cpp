@@ -8,23 +8,16 @@
 #define debug_c(a) 42
 #endif
 
-#include <queue>
-
 using namespace std;
+#include <string>
 
 int main(){
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
 
-    int n, m, counter = 0; cin >> n >> m;
+    int n, t; cin >> n >> t;
+    int leading = (n > 1 ? 2 : 1) * t; 
+    int leadingLen = to_string(leading).length();
 
-    if (n >= m) cout << n-m << endl;
-    else {
-        while (n != m) {
-            m = (m % 2 == 0) ? m/2: m+1;
-            counter++;
-        }
-        cout << counter << endl;  
-    }
-              
+    cout << (leadingLen > n ? "-1" : to_string(leading) + string(n - leadingLen, '0')) << endl; 
 }

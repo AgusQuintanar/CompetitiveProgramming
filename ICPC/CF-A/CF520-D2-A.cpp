@@ -22,8 +22,5 @@ int main(){
     string word; cin >> n >> word;
 
     for (const char &c : word) lettersUsed.insert(tolower(c));
-
-    cout << (lettersUsed.size() == 26 ? "YES" : "NO") << endl;
-
-              
+    cout << (lettersUsed.size() == 26 ? "YES" : "NO") << endl;     
 }
